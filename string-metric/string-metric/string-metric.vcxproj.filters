@@ -15,11 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="levenshtein_distance.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
     <ClInclude Include="jaccard.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="levenshtein_distance.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
     <ClCompile Include="jaccard.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
