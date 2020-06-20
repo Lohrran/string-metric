@@ -8,6 +8,6 @@
 class levenshtein
 {
 	public:
-		int distance(const std::string& s1, const std::string& s2);
+		int distance(std::string &s1, std::string &s2);
 };
 #endif

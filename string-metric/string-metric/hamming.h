@@ -1,9 +1,11 @@
 #ifndef HAMMING_H
 #define HAMMING_H
 
+#include <string>
+
 class hamming
 {
 	public:
-		int distance(const char* s1, const char* s2);
+		int distance(std::string &s1, std::string &s2);
 };
 #endif

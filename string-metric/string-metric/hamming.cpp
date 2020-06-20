@@ -1,16 +1,15 @@
 #include "hamming.h"
 
-int hamming::distance(const char* s1, const char* s2)
+int hamming::distance(std::string& s1, std::string& s2)
 {
-	int index = 0;
 	int distance = 0;
-	while (s1[index] != '\0')
+	
+	for (int i = 0; i < s1.length(); i++)
 	{
-		if (s1[index] != s2[index])
+		if (s1[i] != s2[i])
 		{
 			distance++;
 		}
-		index++;
 	}
 	return distance;
 }

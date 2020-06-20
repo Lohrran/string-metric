@@ -6,8 +6,8 @@
 
 int main(int argc, char* argv[])
 {
-	std::string s1 = "House";
-	std::string s2 = "Home";
+	std::string s1 = "Blue House";
+	std::string s2 = "House Blue";
 
 	double index, distance;
 
@@ -28,12 +28,8 @@ int main(int argc, char* argv[])
 	std::cout << "Levenshtein Distance: " << distance << std::endl;
 
 
-	distance = ham.distance(s1.c_str(), s2.c_str());
+	distance = ham.distance(s1, s2);
 	std::cout << "Hamming Distance: " << distance << std::endl;
-
-	const char* str = "FUCK";
-	std::cout << "Size: " << strlen(str);
-
 
 
 	std::cout << "\n\n\n";
