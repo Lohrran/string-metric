@@ -1,6 +1,6 @@
-#include "levenshtein_distance.h"
+#include "levenshtein.h"
 
-int levenshtein_distance::distance(const std::string& s1, const std::string& s2)
+int levenshtein::distance(const std::string& s1, const std::string& s2)
 {
 	int* dist = new int[s2.length() + 1];
 

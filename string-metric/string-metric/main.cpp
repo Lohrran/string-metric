@@ -1,34 +1,40 @@
 #include <iostream>
 
 #include "jaccard.h"
-#include "levenshtein_distance.h"
+#include "levenshtein.h"
+#include "hamming.h"
 
 int main(int argc, char* argv[])
 {
-	std::string s1 = "SAMSUNG GXY A20 SM-A205G LTE AZUL";
-	std::string s2 = "SAMSUNG GXY A20 AZUL SM-A205G LTE";
-
-	jaccard jac;
+	std::string s1 = "House";
+	std::string s2 = "Home";
 
 	double index, distance;
 
+	jaccard jac;
+	levenshtein lev;
+	hamming ham;
+
+
+	std::cout << "\n----------WORDS----------\n\n";
+	std::cout << "\t" << s1 << ", " << s2 << "\n\n";
+
 	index = jac.index(s1, s2);
 	distance = jac.distance(index);
-
-	std::cout << "\n----------JACCARD----------\n\n";
-
 	std::cout << "Jaccard Distance: " << distance << std::endl;
 
 
-	std::cout << "\n\n\n----------LEVENSHTEIN----------\n\n";
+	distance = lev.distance(s1, s2);
+	std::cout << "Levenshtein Distance: " << distance << std::endl;
 
-	levenshtein_distance levenshtein;
-	std::string s3 = "Car";
-	std::string s4 = "Carro";
 
-	int l_distance = levenshtein.distance(s3, s4);
+	distance = ham.distance(s1.c_str(), s2.c_str());
+	std::cout << "Hamming Distance: " << distance << std::endl;
 
-	std::cout << "Levenshtein Distance: " << l_distance << std::endl;
+	const char* str = "FUCK";
+	std::cout << "Size: " << strlen(str);
+
+
 
 	std::cout << "\n\n\n";
 	system("pause");

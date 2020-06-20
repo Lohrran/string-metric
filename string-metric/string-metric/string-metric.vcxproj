@@ -123,12 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="hamming.h" />
     <ClInclude Include="jaccard.h" />
-    <ClInclude Include="levenshtein_distance.h" />
+    <ClInclude Include="levenshtein.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="hamming.cpp" />
     <ClCompile Include="jaccard.cpp" />
-    <ClCompile Include="levenshtein_distance.cpp" />
+    <ClCompile Include="levenshtein.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
