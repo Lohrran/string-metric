@@ -9,28 +9,20 @@ int main(int argc, char* argv[])
 	std::string s1 = "Blue House";
 	std::string s2 = "House Blue";
 
-	double index, distance;
-
-	jaccard jac;
-	levenshtein lev;
-	hamming ham;
-
-
+	double  distance;
+	
 	std::cout << "\n----------WORDS----------\n\n";
 	std::cout << "\t" << s1 << ", " << s2 << "\n\n";
 
-	index = jac.index(s1, s2);
-	distance = jac.distance(index);
+
+	distance = string_metric::jaccard_distance(s1.c_str(), s2.c_str());
 	std::cout << "Jaccard Distance: " << distance << std::endl;
-
-
-	distance = lev.distance(s1, s2);
+	
+	distance = string_metric::levenshtein_distance(s1.c_str(), s2.c_str());
 	std::cout << "Levenshtein Distance: " << distance << std::endl;
 
-
-	distance = ham.distance(s1, s2);
+	distance = string_metric::hamming_distance(s1.c_str(), s2.c_str());
 	std::cout << "Hamming Distance: " << distance << std::endl;
-
 
 	std::cout << "\n\n\n";
 	system("pause");

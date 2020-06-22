@@ -1,11 +1,13 @@
 #ifndef HAMMING_H
 #define HAMMING_H
 
-#include <string>
+#include <cstring>
 
-class hamming
+namespace string_metric 
 {
-	public:
-		int distance(std::string &s1, std::string &s2);
-};
+	extern "C"
+	{
+		__declspec(dllexport) int hamming_distance(const char* s1, const char* s2);
+	}
+}
 #endif

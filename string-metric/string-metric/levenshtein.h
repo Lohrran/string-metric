@@ -1,13 +1,15 @@
 #ifndef LEVENSHTEIN_H
 #define LEVENSHTEIN_H
 
-#include <string>
-
 #define MINIMUM(x, y) ((x) < (y) ? (x) : (y))
 
-class levenshtein
+#include <cstring>
+
+namespace string_metric
 {
-	public:
-		int distance(std::string &s1, std::string &s2);
-};
+	extern "C"
+	{
+		__declspec(dllexport) int levenshtein_distance(const char* s1, const char* s2);
+	}
+}
 #endif

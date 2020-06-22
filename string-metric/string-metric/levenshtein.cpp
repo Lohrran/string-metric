@@ -1,25 +1,28 @@
 #include "levenshtein.h"
 
-int levenshtein::distance(std::string& s1, std::string& s2)
+extern "C" __declspec(dllexport) int string_metric::levenshtein_distance(const char* s1, const char* s2)
 {
-	int* dist = new int[s2.length() + 1];
+	int len1 = strlen(s1);
+	int len2 = strlen(s2);
 
-	if (s1.length() == 0 || s2.length() == 0)
+	int* dist = new int[len2 + 1];
+
+	if (len1 == 0 || len2 == 0)
 	{
 		return 0;
 	}
 
-	for (int i = 0; i <= s2.size(); i++)
+	for (int i = 0; i <= len2; i++)
 	{
 		dist[i] = i;
 	}
 
-	for (int i = 0; i <= s1.length() - 1; i++)
+	for (int i = 0; i <= len1 - 1; i++)
 	{
 		dist[0] = i + 1;
 		int insertion = i;
 
-		for (int j = 0; j <= s2.length() - 1; j++)
+		for (int j = 0; j <= len2 - 1; j++)
 		{
 			int deletion = dist[j + 1];
 
@@ -36,7 +39,7 @@ int levenshtein::distance(std::string& s1, std::string& s2)
 		}
 	}
 
-	int distance = dist[s2.length()];
+	int distance = dist[len2];
 
 	delete[] dist;
 
