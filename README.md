@@ -1,3 +1,5 @@
-# string-metric-algorithms
+# String Metric
 
-DLL to use export into your project and use the most famous string metric algorithms.
+The most famous string metric algorithms to use in your project.
+
+Just clone the project and run it! Or you can also download the dll in the folder */dll
