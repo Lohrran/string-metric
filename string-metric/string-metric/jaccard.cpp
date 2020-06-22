@@ -1,6 +1,14 @@
 #include "jaccard.h"
 
-double jaccard::index(const std::string& s1, const std::string& s2)
+double string_metric::jaccard_distance(const char* s1, const char* s2)
+{
+	double ind = string_metric::index(s1, s2);
+
+	// Return Jaccard Distance calculating using the below formula
+	return 1 - ind;
+}
+
+double string_metric::index(const std::string& s1, const std::string& s2)
 {
 	// Divide both String by white space.
 	std::set<std::string> ss1 = split(s1);
@@ -13,13 +21,7 @@ double jaccard::index(const std::string& s1, const std::string& s2)
 	return static_cast<double>(intersect.size()) / (ss1.size() + ss2.size() - intersect.size());
 }
 
-double jaccard::distance(double& index)
-{
-	// Return Jaccard Distance calculating using the below formula
-	return 1 - index;
-}
-
-std::set<std::string>jaccard::split(const std::string& s)
+std::set<std::string>string_metric::split(const std::string& s)
 {
 	std::set<std::string> splited;
 
@@ -32,7 +34,7 @@ std::set<std::string>jaccard::split(const std::string& s)
 	return splited;
 }
 
-std::set<std::string>jaccard::intersection(std::set<std::string>& s1, std::set<std::string>& s2)
+std::set<std::string>string_metric::intersection(std::set<std::string>& s1, std::set<std::string>& s2)
 {
 	std::set<std::string> intersect;
 
