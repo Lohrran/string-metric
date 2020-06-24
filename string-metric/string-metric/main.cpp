@@ -3,11 +3,12 @@
 #include "jaccard.h"
 #include "levenshtein.h"
 #include "hamming.h"
+#include "sorensen_dice_coefficient.h"
 
 int main(int argc, char* argv[])
 {
 	std::string s1 = "Blue House";
-	std::string s2 = "House Blue";
+	std::string s2 = "Blue House";
 
 	double  distance;
 	
@@ -23,6 +24,10 @@ int main(int argc, char* argv[])
 
 	distance = string_metric::hamming_distance(s1.c_str(), s2.c_str());
 	std::cout << "Hamming Distance: " << distance << std::endl;
+
+	distance = string_metric::dice_coefficient(s1.c_str(), s2.c_str());
+	std::cout << "Sorensen Dice Coefficient: " << distance << std::endl;
+
 
 	std::cout << "\n\n\n";
 	system("pause");

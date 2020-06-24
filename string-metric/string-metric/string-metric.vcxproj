@@ -126,12 +126,14 @@
     <ClInclude Include="hamming.h" />
     <ClInclude Include="jaccard.h" />
     <ClInclude Include="levenshtein.h" />
+    <ClInclude Include="sorensen_dice_coefficient.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hamming.cpp" />
     <ClCompile Include="jaccard.cpp" />
     <ClCompile Include="levenshtein.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sorensen_dice_coefficient.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

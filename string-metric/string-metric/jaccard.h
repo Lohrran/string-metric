@@ -7,8 +7,6 @@
 #include <sstream>
 #include <set>
 
-
-
 namespace string_metric
 {
 	extern "C"

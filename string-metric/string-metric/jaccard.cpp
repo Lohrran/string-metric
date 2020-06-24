@@ -1,6 +1,6 @@
 #include "jaccard.h"
 
-double string_metric::jaccard_distance(const char* s1, const char* s2)
+extern "C" __declspec(dllexport) double string_metric::jaccard_distance(const char* s1, const char* s2)
 {
 	double ind = string_metric::index(s1, s2);
 

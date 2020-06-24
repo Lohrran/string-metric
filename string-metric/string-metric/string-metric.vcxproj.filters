@@ -24,6 +24,9 @@
     <ClInclude Include="levenshtein.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="sorensen_dice_coefficient.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +39,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="levenshtein.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="sorensen_dice_coefficient.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
